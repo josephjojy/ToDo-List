@@ -4,14 +4,14 @@ class AddTodo extends Component{
     state = {
         content: ""
     }
-
+    props :any;
     handleChange =(e:{target:HTMLInputElement}) => {
         this.setState({
             content : e.target.value
         })
     }
-    handleSubmit =(e:{target:HTMLInputElement}) =>{
-        if(this.content!==""){
+    handleSubmit =(e:any) =>{
+        if(this.state.content!==""){
         e.preventDefault();
         this.props.addTodo(this.state);
         this.setState({
