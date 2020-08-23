@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Todos = ({todos , checktodo}) =>{
+const Todos = ({todos , checktodo}:any) =>{
     const todoList = todos.length ? (
-        todos.map(todo =>{
+        todos.map((todo:any) =>{
             return(
                 <div key={todo.id}>
                     <span onClick={() => {checktodo(todo.id)}}>{todo.content}</span>    

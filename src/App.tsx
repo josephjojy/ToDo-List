@@ -10,8 +10,8 @@ state={
     
   ]
 }
-checktodo =(id) =>{
-  const todos = this.state.todos.filter(todo =>{
+checktodo =(id:number) =>{
+  const todos = this.state.todos.filter((todo:any) =>{
     return todo.id!==id;
   });
   this.setState({
@@ -19,7 +19,7 @@ checktodo =(id) =>{
   })
 }
 
-addTodo = (todo) => {
+addTodo = (todo:any) => {
   todo.id=this.state.i;
   let i = todo.id + 1;
   let todos = [...this.state.todos,todo];
