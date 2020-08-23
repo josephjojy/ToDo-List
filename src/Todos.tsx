@@ -5,7 +5,7 @@ const Todos = ({todos , checktodo}:any) =>{
         todos.map((todo:any) =>{
             return(
                 <div key={todo.id}>
-                    <span onClick={() => {checktodo(todo.id)}}>{todo.content}</span>    
+                    <span onClick={() => {checktodo(todo)}}>{todo.content}</span>    
                 </div>
             )
         })
